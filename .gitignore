@@ -1,0 +1,5 @@
+large_dataset/
+tiny_dataset/
+chkpt/
+__pycache__/
+.vscode/
