@@ -92,8 +92,8 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('-l','--lr', type=float, default=1e-4)
     parser.add_argument('--num_workers', type=int, default=16)
-    parser.add_argument('--train_path', type=str, default='./tiny_dataset/train')
-    parser.add_argument('--test_path', type=str, default='./tiny_dataset/test')
+    parser.add_argument('--train_path', type=str, default='./large_dataset/train')
+    parser.add_argument('--test_path', type=str, default='./large_dataset/test')
     args = parser.parse_args()
     
     chkpt_path = os.path.join(args.checkpoint_path, args.model)
