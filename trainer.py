@@ -39,6 +39,9 @@ def validate(model, testloader, criterion, writer, epoch):
             sdr = bss_eval_sources(target_wav, estimated_wav, False)[0][0]
             total_sdr += sdr
             
+            if batch_count == 10:
+                break
+            
         avg_test_loss = test_total_loss / batch_count if batch_count > 0 else float('nan')
         avg_sdr = total_sdr / batch_count if batch_count > 0 else float('nan')
         writer.log_evaluation(avg_test_loss, avg_sdr, mixed_wav, target_wav, estimated_wav, mixed_spect.T, target_spect.T, estimated_spect.T, estimated_mask.T, epoch+1)
